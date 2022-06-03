@@ -1,0 +1,37 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* navbar */
+header{
+    padding-top: 100px;
+}
+.navbar{
+    height: 100px;
+    background-color: #080b12;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 20px;
+}
+.upgrade{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1rem;
+    padding: 0.8rem 2rem;
+    background: #080b12;
+    border: 1px solid white;
+    border-radius: 30px;
+}
