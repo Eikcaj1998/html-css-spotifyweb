@@ -1,30 +1,55 @@
+/******************************************
+common
+****************************************** */
 body{
     font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
+    padding-bottom: 20vh;
+    overflow-y: hidden;    
 }
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+.txt-white{
+    color: white;
+}
+.txt-grey{
+    color: grey;
+}
+.disp-none{
+    display: none;
+}
 a{
     text-decoration: none;
     color: white;
 }
-
-/* navbar */
-header{
-    padding-top: 100px;
+.d-flex{
+    display: flex;
 }
+.container{
+    max-width:1200px;
+}
+ul{
+    list-style-type: none;
+}
+/* ******************************************
+                    main
+****************************************** */
+/* ******************************************
+top navbar
+****************************************** */
 .navbar{
     height: 100px;
     background-color: #080b12;
     position: fixed;
-    left: 0;
+    left: 4rem;
     right: 0;
     top: 0;
     padding: 20px;
+    z-index: 1;
 }
 .upgrade{
     position: absolute;
@@ -34,4 +59,113 @@ header{
     background: #080b12;
     border: 1px solid white;
     border-radius: 30px;
+}
+/* ******************************************
+navbar-left
+****************************************** */
+.column{
+    background-color: black;
+    width: 4rem;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.col{
+    width: 4 rem;
+}
+.column img{
+    width: 2rem;
+    padding: 1rem 0;
+}
+.install{
+    padding-bottom: 1rem;
+}
+.install .txt-grey,
+.account .txt-grey{
+    margin-right: 1rem;
+}
+.account .txt-grey{
+    margin-bottom: 1rem;
+    background-color: grey;
+    border-radius: 50%;
+}
+.rule{
+    border: 1px solid grey;
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+footer{
+    height: 10vh;
+    background-color: #282828;
+}
+/*******************************************
+ ******************************************
+media tablet
+****************************************** 
+*******************************************/
+@media all and (min-width: 576px){
+
+  /* ******************************************
+          top  navbar */  
+    .upgrade{
+        padding: 0.5rem 1.5rem;
+    }
+/* ******************************************
+            navbar-left */
+    .column{
+        width:  12rem;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+    .column img{
+        padding: 0;
+        width: 1.5rem;
+    }
+    .navbar-left .logo-txt{
+        padding: 1rem 0;
+    }
+    .navbar{      
+        left: 12rem;
+    }
+    .logo{
+        display: none;
+    }
+    .column .logo-txt{
+        width: 8rem;
+    }
+    .navbar-left .disp-none {
+        vertical-align: 0.3rem; 
+    }
+    .disp-none {
+        display: inline-block;
+
+    }
+    .green-line {
+        position: absolute;
+        height: 40px;
+        border: 1px solid greenyellow;
+        left: 0;
+        top: 74px;
+    }
+    li span{
+        padding-bottom: 1rem;
+    }
+    .col .navbar-left{
+        padding-bottom: 1rem;
+    }
+  .playlist .txt-grey{
+        padding-bottom: 1rem;
+    }
+    .side-list{
+        overflow-y: auto;
+        height: 15rem;
+        margin-top: 2rem;
+    }
+    #plus {
+        color: black;
+        padding: 10px;
+        background-color: gray;
+        margin-top: 1rem;
+    }
 }
