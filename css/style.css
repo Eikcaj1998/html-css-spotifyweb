@@ -2,7 +2,6 @@
 common
 ****************************************** */
 body{
-    overflow-y: hidden;  
 }
 *{
     margin: 0;
@@ -17,7 +16,7 @@ a{
 }
 .d-flex{display: flex;}
 .fd-col{flex-direction: column;}
-.container{max-width:1200px;}
+.container{min-width:500px;}
 .txt-cent{
     text-align: center;
 }
@@ -50,7 +49,7 @@ navbar-left
 .column{
     background-color: black;
     width: 4rem;
-    height:89vh;
+    height:calc(100vh - 6rem);
     justify-content: space-between;
     align-items: center;
     z-index: 1;
@@ -106,9 +105,9 @@ main-menu-top
 .main-menu-top{
     width: calc(100% - 4rem);
     padding-top: 100px;
-    height:89vh;
     background-color: #141922;
     overflow-y: auto;
+    height:calc(100vh - 6rem);
 }
 .option-menu{
     padding-top: 2rem;
@@ -143,11 +142,11 @@ main-menu
 footer
 ******************************************* */
 footer{
-    height: 11vh;
+    height: 6rem;
     background-color: #282828;
-    padding-top: 1rem;
     z-index: 2;
     position: relative;
+    padding-top: 1rem;
     top: 0;
     left: 0;
 }
@@ -278,8 +277,11 @@ media pc
 *******************************************/
 @media all and (min-width: 768px){
     /* ******************************************
-    footer  */
+    /* main-menu */
     .w-50{width: calc(100% / 4);} 
+    
+    /* ******************************************
+    footer  */
     .song-icons{
         flex-direction: row;
     }
@@ -289,4 +291,13 @@ media pc
     
 
 }
-    
+/*******************************************
+ ******************************************
+media pc-large
+****************************************** 
+*******************************************/
+@media all and (min-width: 768px){
+    /* ******************************************
+    /* main-menu */
+    .w-50{width: calc(100% / 6);} 
+}    
